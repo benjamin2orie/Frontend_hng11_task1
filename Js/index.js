@@ -11,14 +11,12 @@ const today = new Date();
 
   // setting the current time in utc format
 
-const date = new Date();
-const formatter = new Intl.DateTimeFormat('en-US', {
-  hour: '2-digit',
-  minute: '2-digit',
-  second: '2-digit',
-  timeZone: 'GMT'
-});
-
-const formattedTime = formatter.format(date);
-let times = document.querySelector('#times');
-times.textContent = `${formattedTime} `;
+function updateUTCTime() {
+  const now = new Date();
+  const hours = String(now.getUTCHours()).padStart(2, '0');
+  const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+  const currentTime = `${hours}:${minutes}`;
+  document.getElementById('times').innerHTML = currentTime+ ' UTC';
+}
+updateUTCTime();
+setInterval(updateUTCTime, 60000)
