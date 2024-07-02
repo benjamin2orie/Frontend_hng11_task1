@@ -6,10 +6,10 @@
 const today = new Date();
   const day = today.getDay();
   const daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-  const month = today.getMonth() + 1; 
-  const year = today.getFullYear();
+  // const month = today.getMonth() + 1; 
+  // const year = today.getFullYear();
   let toDay = document.querySelector('#toDay');
-  toDay.textContent = `${daylist[day]} ${day} / ${month} / ${year}`;
+  toDay.textContent = `${daylist[day]} ${day} `;
   let hour = today.getHours();
   const minute = today.getMinutes();
   const second = today.getSeconds();
