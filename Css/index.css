@@ -1,0 +1,236 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background:#ddd;
+}
+
+/* started styling the header  */
+
+.overal-container{
+    width:100%;
+    height: 90px;
+    /* background: #6E6E6E; */
+     background: #3b5889;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container h2{
+    text-transform: capitalize;
+    color: #fafafa;
+    font-size:30px;
+    padding-left: 2em;
+}
+ .overal-container ul{
+    display: flex;
+    list-style: none;
+    padding-left: 30em;
+    font-size: 20px;
+    gap:5em;
+    cursor:pointer;
+    text-transform: capitalize;
+    padding-right: 0em;
+    color:#adadad;
+    padding-top: 0.5em;
+
+}
+
+.container-header p{
+    font-size: 30px;
+    font-family: monospace;
+    color: #3b5889;
+    text-align:center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+   
+}
+
+.section_container h3{
+    text-align:center;
+    font-size:20px;
+    color:#6E6E6E;
+    font-family: monospace;
+    text-transform: capitalize;
+}
+.section_container{
+    margin-top: 2em;
+}
+
+.container-wrapper{
+    width:1300px;
+    max-width:100vw;
+    /* height:700px; */
+    margin:auto;
+    position:relative;
+    overflow: hidden;
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+    padding-bottom: 2em;
+    gap: 2em;
+}
+/* styling the cards */
+.sub-wrapper{
+    width: 400px;
+    height:200px;
+    background: #5555;
+    border: 1px solid #6E6E6E;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+}
+
+.sub-wrapper p{
+    text-align: center;
+    padding-top: 4em;
+    color:#6E6E6E;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+/* styling image section */
+
+.Image_slack_name_wrapper{
+    text-align: center;
+    padding-top: 4em;
+    background: #FFFA;
+    margin-top: 2em;
+    padding-bottom: 2em;
+}
+.Image_slack_name_wrapper ul{
+    padding-top: 1em;
+    list-style: none;
+    font-size: 20px;
+    color: #6E6E6E;
+}
+
+.know_more_section{
+    text-align: center;
+    margin-top:2em;
+    padding-top: 2em;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.know_more_section a{
+    text-decoration: none;
+    color: #FFFA;
+  
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.know_more_section h3{
+    padding-bottom: 2em;
+}
+.know_more_section li{
+    width: 200px;
+    height:50px;
+      background: #3b5889;
+      list-style: none;
+      font-size: 20px;
+      text-transform: capitalize;
+      padding-top: 0.5em;
+      border-radius: 3px;
+      margin-left: 36em;
+      margin-bottom: 2em;
+}
+
+/* styling the footer */
+footer p{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 2em;
+    background:#111;
+    color:#FFA;
+    width:100%;
+    height:80px;
+}
+
+/* started styling media query */
+
+@media (max-width: 768px) {
+
+    .container h2{
+        font-size:15px;
+        padding-top: 1em;
+    }
+    .overal-container ul{
+        font-size: 12px;
+        gap:2em;
+        padding-right: 0;
+        padding-left: 2em;
+        color:#FFFA;
+        padding-top: 1.5em;
+    
+    }
+
+    .container-header p{
+        font-size: 16px;
+        padding-top: 2em;
+        padding-bottom: 3em;
+        width:300px;
+       padding-left:2em;
+    }
+
+
+    .section_container h3{
+        font-size:16px;
+        padding-left: 2em;
+        width:300px;
+    }
+
+
+    .container-wrapper{
+        display: block;
+    }
+
+    .sub-wrapper{
+        width: 300px;
+        height: 150px;
+        margin: 1em;
+
+    
+    }
+    .sub-wrapper p{
+        padding-top: 1em;
+        padding-left: 2em;
+        width:80%;
+    }
+
+    .Image_slack_name_wrapper{
+        padding-top: 2em;
+        margin-top: 1em;
+    }
+
+    .Image_slack_name_wrapper ul{
+        padding-top: 1em;
+        font-size: 16px;
+    }
+
+    .know_more_section li{
+          margin-left: 3em;
+    }
+    
+    .know_more_section h3{
+        padding-bottom: 2em;
+        font-size: 20px;
+    }
+
+
+    footer p{
+        font-size: 20px;
+        text-align: center;
+        padding-top: 1.5em;
+        background:#aaa;
+        color:#111;
+        width:100%;
+        height:80px;
+    }
+}
