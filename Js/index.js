@@ -8,36 +8,17 @@ const today = new Date();
   const daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
   let toDay = document.querySelector('#toDay');
   toDay.textContent = `${daylist[day]}`;
-  let hour = today.getHours();
-  const minute = today.getMinutes();
-  const second = today.getSeconds();
-  let prepand = (hour >= 12)? " PM ":" AM ";
-  hour = (hour >= 12)? hour - 12: hour;
-  if (hour===0 && prepand===' PM ') 
-  { 
-  if (minute===0 && second===0)
-  { 
-  hour=12;
-  prepand=' Noon';
-  } 
-  else
-  { 
-  hour=12;
-  prepand=' PM';
-  } 
-  } 
-  if (hour===0 && prepand===' AM ') 
-  { 
-  if (minute===0 && second===0)
-  { 
-  hour=12;
-  prepand=' Midnight';
-  } 
-  else
-  { 
-  hour=12;
-  prepand=' AM';
-  } 
-  } 
-  let times = document.querySelector('#times');
-  times.textContent = `${hour}: ${minute}${prepand}`;
+
+  // setting the current time in utc format
+
+const date = new Date();
+const formatter = new Intl.DateTimeFormat('en-US', {
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  timeZone: 'GMT'
+});
+
+const formattedTime = formatter.format(date);
+let times = document.querySelector('#times');
+times.textContent = `${formattedTime} `;
